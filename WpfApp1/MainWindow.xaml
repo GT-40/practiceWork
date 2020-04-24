@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1000"  SizeToContent="WidthAndHeight" >
+    <Grid>
+        <Grid x:Name="grid1" Visibility="Visible" Margin="290,130,279.6,114">
+            <Button Content="Подключиться" Margin="52,67,58,67" Click="Button_Click"/>
+        </Grid>
+
+        <Grid x:Name="grid2" Visibility="Hidden" Margin="0,0,-0.4,0">
+            <Grid x:Name="grid3" Visibility="Visible" Margin="0,0,519.6,0">
+
+                <ComboBox x:Name="SexCB" Height="35" Margin="212,169,0,416" VerticalAlignment="Center" HorizontalAlignment="Center" Width="262"/>
+                <TextBox x:Name="SurnameInputTB" Margin="211,50,1,535" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" Width="262"/>
+                <TextBox x:Name="NameInputTB" Margin="211,90,1,496" Height="34" VerticalAlignment="Center" HorizontalAlignment="Center" Width="262"/>
+                <TextBox x:Name="MiddleNameInputTB"  Margin="211,129,1,456" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" Width="262"/>
+                <Calendar x:Name="BirthdayChooseCalendar" Margin="254,209,43,238" Width="177" Height="173" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ComboBox x:Name="DepartmentCB"  Height="35" Margin="212,425,0,160" Width="262" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ComboBox x:Name="PositionCB"  Height="35" Margin="212,512,0,73" Width="262" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Button x:Name="AddMember" IsEnabled="False" Content="Добавить сотрудника" Margin="183,585,161,10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="25" Click="AddMember_Click"/>
+                <Label Content="Фамилия" Margin="41,50,330,535" HorizontalAlignment="Center" Width="103" Height="35" VerticalAlignment="Center"/>
+                <Label Content="Имя" Margin="41,90,330,495" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" Width="103"/>
+                <Label Content="Отчество" Margin="41,129,330,456" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" Width="103"/>
+                <Label Content="Пол" Margin="41,169,330,416" HorizontalAlignment="Center" Width="103" Height="35" VerticalAlignment="Center"/>
+                <Label Content="Дата рождения" Margin="41,209,330,376" HorizontalAlignment="Center" VerticalAlignment="Center" Width="103" Height="35"/>
+                <Label Content="Отдел" Margin="41,425,330,160" Width="103" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Content="Должность" Margin="41,512,330,73" Width="103" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label x:Name="BithdayDateView" Content="" Margin="212,382,0,203" HorizontalAlignment="Center" VerticalAlignment="Center" Width="262" Height="35"/>
+                <Label Content="Введите данные нового сотрудника" Margin="133,10,111,575" HorizontalAlignment="Center" Width="230" Height="35" VerticalAlignment="Center"/>
+                <Button x:Name="AcceptDepartment" Content="Подтвердить отдел" HorizontalAlignment="Left" Height="24" Margin="274,465,0,0" VerticalAlignment="Top" Width="157" Click="AcceptDepartment_Click"/>
+            </Grid>
+
+            <Grid Margin="474,3,-0.4,0" Width="520" Height="617">
+                <Button x:Name="AddTable" Content="Добавить таблицу" HorizontalAlignment="Center" Margin="43,577,357,15" VerticalAlignment="Center" Click="AddTable_Click" Width="120" Height="25"/>
+                <TabControl x:Name="TabsCntrl" Margin="10,10,10,72" Height="535" HorizontalAlignment="Left"/>
+                <Button x:Name="RemoveTables" Content="Удалить таблицы" HorizontalAlignment="Center" Margin="321,577,79,15" VerticalAlignment="Center" Width="120" Height="25" Click="RemoveTables_Click"/>
+                <Button x:Name="UpdateTable" Content="Обновить таблицы" HorizontalAlignment="Center" Margin="186,577,214,15" VerticalAlignment="Center"  Width="120" Height="25" Click="UpdateTable_Click"/>
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Window>
